@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".QuizActivity">
+
+    <!-- top row: question counter left, toggle right -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <!-- updated dynamically by tvProgress.setText() in loadQuestion() -->
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:text="Question 1 of 5"/>
+
+        <!-- dark mode switch: checked = dark, unchecked = light -->
+        <Switch
+            android:id="@+id/btnToggleTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dark Mode"
+            android:textSize="12sp"
+            android:checked="false"/>
+
+    </LinearLayout>
+
+    <!-- progress bar track: grey bg, filled with green/red segments by Java -->
+    <LinearLayout
+        android:id="@+id/progressSegments"
+        android:layout_width="match_parent"
+        android:layout_height="14dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp"
+        android:background="#E0E0E0"
+        android:weightSum="5"/>
+
+    <!-- question text, set dynamically in loadQuestion() -->
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="24dp"
+        android:text="Question goes here"/>
+
+    <!-- answer options, text set dynamically in loadQuestion() -->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="24dp">
+
+        <RadioButton
+            android:id="@+id/rbOption0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:button="@null"
+            android:drawableStart="@drawable/radio_selector"
+            android:drawablePadding="12dp"
+            android:background="@drawable/option_background"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioButton
+            android:id="@+id/rbOption1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:button="@null"
+            android:drawableStart="@drawable/radio_selector"
+            android:drawablePadding="12dp"
+            android:background="@drawable/option_background"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioButton
+            android:id="@+id/rbOption2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:button="@null"
+            android:drawableStart="@drawable/radio_selector"
+            android:drawablePadding="12dp"
+            android:background="@drawable/option_background"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioButton
+            android:id="@+id/rbOption3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:button="@null"
+            android:drawableStart="@drawable/radio_selector"
+            android:drawablePadding="12dp"
+            android:background="@drawable/option_background"
+            android:layout_marginBottom="8dp"/>
+
+    </RadioGroup>
+
+    <!-- submit/next/finish button, text changes dynamically in Java -->
+    <Button
+        android:id="@+id/btnSubmitNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"/>
+
+</LinearLayout>
