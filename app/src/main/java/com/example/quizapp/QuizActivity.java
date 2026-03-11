@@ -62,17 +62,17 @@ public class QuizActivity extends AppCompatActivity {
         });
 
         questions = new Question[]{
-                new Question("What is the capital of Australia?",
-                        new String[]{"Sydney", "Melbourne", "Canberra", "Brisbane"}, 2),
-                new Question("Which planet is closest to the Sun?",
-                        new String[]{"Venus", "Mercury", "Earth", "Mars"}, 1),
-                new Question("What is 12 x 12?",
-                        new String[]{"132", "144", "154", "124"}, 1),
-                new Question("What language is primarily used to build Android apps?",
-                        new String[]{"Swift", "Python", "Kotlin/Java", "C++"}, 2),
-                new Question("What does CPU stand for?",
-                        new String[]{"Central Process Unit", "Computer Personal Unit",
-                                "Central Processing Unit", "Core Processing Unit"}, 2)
+                new Question("What is widely considered the most transformative impact AI could have on education delivery?",
+                    new String[]{"Replacing teachers entirely", "Personalising learning for each student", "Eliminating schools and universities", "Making exams harder"}, 1),
+                new Question("Which of the following is a common limitation of AI coding assistants when generating software solutions?",
+                    new String[]{"They cannot produce any working code", "They frequently misunderstand context from large or complex projects", "They refuse to write code longer than 10 lines", "Memory and broader software purpose"}, 1),
+                new Question("Approximately what proportion of all personal income tax in Australia is paid by the top 10% of taxpayers??",
+                    new String[]{"3%", "25%", "46%", "70%"}, 2),
+                new Question("When evaluating economic policies, what mistake did Milton Friedman warn people about?",
+                    new String[]{"Ignoring inflation", "Looking only at the immediate visible effects and ignoring long-term consequences", "Ignoring unemployment data", "Focusing too much on statistics"}, 1),
+                new Question("Milton Friedman famously argued there are four ways to spend money. Which method is most likely to waste the most?",
+                    new String[]{"Spending your own money on yourself", "Spending your own money on someone else",
+                                "Spending someone else's money on yourself", "Spending someone else's money on someone else (e.g: Tax)"}, 3)
         };
 
         answeredCorrectly = new boolean[questions.length];
