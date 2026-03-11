@@ -10,6 +10,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
@@ -84,8 +86,10 @@ public class QuizActivity extends AppCompatActivity {
             answered          = savedInstanceState.getBoolean("ANSWERED", false);
             answeredCorrectly = savedInstanceState.getBooleanArray("ANSWERED_CORRECTLY");
 
-            for (int i = 0; i < currentIndex; i++) {
-                addProgressSegment(answeredCorrectly[i]);
+            if (answeredCorrectly != null) {
+                for (int i = 0; i < currentIndex; i++) {
+                    addProgressSegment(answeredCorrectly[i]);
+                }
             }
 
             // can't call loadQuestion() here — resets the answered state!!!!
@@ -110,7 +114,7 @@ public class QuizActivity extends AppCompatActivity {
     }
 // saves state!
     @Override
-    protected void onSaveInstanceState(Bundle outState) {
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putInt("CURRENT_INDEX", currentIndex);
         outState.putInt("SCORE", score);
