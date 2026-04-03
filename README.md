@@ -31,3 +31,12 @@ How to run
   2. Open in Android Studio
   3. Change your Questions and answer options [four options] (QuizActivity - line 65 to 75)
   4. Run on an emulator or physical device (API 24+).
+
+## Screenshots
+
+| | | |
+|---|---|---|
+| <img src="screenshots/01_name_entry.png" width="250" height="600"> | <img src="screenshots/02_quiz.png" width="250" height="600"> | <img src="screenshots/03_feedback.png" width="250" height="600"> |
+| **Name Entry** | **Quiz** | **Feedback** |
+| <img src="screenshots/04_progress.png" width="250" height="600"> | <img src="screenshots/05_results.png" width="250" height="600"> | <img src="screenshots/06_dark_mode.png" width="250" height="600"> |
+| **Progress** | **Results** | **Dark Mode** |
